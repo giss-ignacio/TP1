@@ -1,4 +1,4 @@
-package ar.edu.ort.tp1.ej1;
+package ar.edu.ort.tp1.ej2;
 
 public class NumeroTelefonico {
 	private String caracteristica;
