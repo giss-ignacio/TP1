@@ -1,4 +1,4 @@
-package ar.edu.ort.tp1.ejercicio2_3;
+package ar.edu.ort.tp1.ejercicio3;
 
 public class Olimpiadas {
 
@@ -6,10 +6,10 @@ public class Olimpiadas {
 
 		Carrera carrera = new Carrera();
 		carrera.agregarCorredor(new Corredor("jose", 120.0D));
-		carrera.agregarCorredor(new Corredor("luis", 120.0D));
+		carrera.agregarCorredor(new Corredor("luis", 122.4D));
 		carrera.agregarCorredor(new Corredor("lucas", 122.4D));
 		carrera.agregarCorredor(new Corredor("juan", 126.4D));
-		carrera.agregarCorredor(new Corredor("jorge", 136.4D));
+		carrera.agregarCorredor(new Corredor("jorge", 120.4D));
 		
 		System.out.println("Primer puesto:");
 		for (Corredor corredor : carrera.obtenerPrimerPuesto()) {

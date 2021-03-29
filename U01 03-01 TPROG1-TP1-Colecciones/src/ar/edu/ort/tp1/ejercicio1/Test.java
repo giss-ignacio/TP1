@@ -14,7 +14,7 @@ public class Test {
 		
 		testAgregar("Nacho Koch", grupo);
 		
-		testAgregar("Joaco Hertzulis", grupo);
+		testAgregar("Joaco Charovsky", grupo);
 		
 		testAgregar("Nacho Giss", grupo);
 		
@@ -51,7 +51,7 @@ public class Test {
 	}
 	
 	private static void testRemover(String integrante, Grupo grupo) {
-		String integranteRemovido = grupo.removerIntegrante("Cosme Fulanito");
+		String integranteRemovido = grupo.removerIntegrante(integrante);
 		if (integranteRemovido != null) {
 			System.out.println(integranteRemovido + " fue removido del grupo " + grupo.getNombre());
 		} else {

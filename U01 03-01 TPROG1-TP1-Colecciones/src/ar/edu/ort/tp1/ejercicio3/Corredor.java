@@ -1,11 +1,10 @@
-package ar.edu.ort.tp1.ejercicio2_3;
+package ar.edu.ort.tp1.ejercicio3;
 
 public class Corredor {
-	private String nombre;
+	private final String nombre;
 	private double tiempo;
 	
 	public Corredor(String nombre, Double tiempo) {
-		super();
 		this.nombre = nombre;
 		this.tiempo = tiempo;
 	}

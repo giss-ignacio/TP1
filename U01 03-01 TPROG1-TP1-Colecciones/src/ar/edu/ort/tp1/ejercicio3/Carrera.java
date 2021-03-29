@@ -1,4 +1,4 @@
-package ar.edu.ort.tp1.ejercicio2_3;
+package ar.edu.ort.tp1.ejercicio3;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,8 +14,6 @@ public class Carrera {
 	public void agregarCorredor(Corredor corredor) {
 		corredores.add(corredor);
 	}
-	
-
 	
 	public List<Corredor> obtenerPrimerPuesto() {
 		return obtenerMejoresCorredores(this.corredores);

@@ -6,28 +6,30 @@ import java.util.List;
 public class Grupo {
 	private String nombre;
 	private List<String> integrantes;
+
 	public Grupo(String nombre) {
-		super();
 		this.nombre = nombre;
 		this.integrantes = new ArrayList<>();;
 	}
+
 	public String getNombre() {
 		return nombre;
 	}
+
 	private void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	
+
 	public void agregarIntegrante(String nombreIntegrante) {
 		if (buscarIntegrante(nombreIntegrante) == null) {
 			integrantes.add(nombreIntegrante);
 		}
 	}
-	
+
 	public int getCantidadIntegrantes() {
 		return integrantes.size();
 	}
-	
+
 	private int obtenerPosicionIntegrante(String nombreIntegrante) {
 		int posicionIntegrante = -1;
 		for (int i = 0; i < integrantes.size(); i++) {
@@ -38,7 +40,7 @@ public class Grupo {
 		}
 		return posicionIntegrante;
 	}
-	
+
 	public String obtenerIntegrante(int posicion) {
 		String integrante = null;
 		if (posicion <= 1 || posicion >= integrantes.size()) {
@@ -49,7 +51,7 @@ public class Grupo {
 		
 		return integrante;
 	}
-	
+
 	public String buscarIntegrante(String nombreIntegrante) {
 		String integranteEncontrado = null;
 		if (obtenerPosicionIntegrante(nombreIntegrante) != -1) {
@@ -57,7 +59,7 @@ public class Grupo {
 		}
 		return integranteEncontrado;
 	}
-	
+
 	 public String removerIntegrante(String nombreIntegrante) {
 		 int posicion = obtenerPosicionIntegrante(nombreIntegrante);
 		 String integranteQuitado = null;
@@ -68,7 +70,7 @@ public class Grupo {
 		 
 		 return integranteQuitado;
 	 }
-	 
+
 	 private void mostrarIntegrantes() {
 		 System.out.println("Cantidad de integrantes: " + integrantes.size());
 		 if (!integrantes.isEmpty()) {
@@ -78,12 +80,12 @@ public class Grupo {
 			 }
 		 }
 	 }
-	 
+
 	 public void mostrar() {
 		 System.out.println("Nombre del grupo: " + nombre);
 		 mostrarIntegrantes();
 	 }
-	 
+
 	 public void vaciar() {
 		 integrantes.clear();
 	 }
