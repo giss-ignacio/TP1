@@ -31,11 +31,12 @@ public class Edificio {
 	
 	private int obtenerPosicion(String piso, String depto) {
 		int posicionVivienda = -1;
-		for (int i = 0; i < this.viviendas.size(); i++) {
-			if (this.viviendas.get(i).coincide(piso, depto)) {
-				posicionVivienda = i;
-				break;
+		int posicionActual = 0;
+		while (posicionVivienda == -1 && posicionActual < this.viviendas.size()) {
+			if (this.viviendas.get(posicionActual).coincide(piso, depto)) {
+				posicionVivienda = posicionActual;
 			}
+			posicionActual++;
 		}
 		return posicionVivienda;
 	}
