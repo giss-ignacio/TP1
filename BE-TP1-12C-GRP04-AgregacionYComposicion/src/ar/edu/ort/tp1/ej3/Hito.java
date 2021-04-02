@@ -1,16 +1,23 @@
 package ar.edu.ort.tp1.ej3;
 
-import java.util.Date;
+import java.util.ArrayList;
 
 public class Hito {
-	private Date fecha;
+	private String fecha;
 	private String descripcion;
-	private Conjunto<Persona> personasInvolucradas;
+	private ArrayList<Persona> personasInvolucradas;
 	
-	public Hito(Date fecha, String descripcion, Conjunto<Persona> personasInvolucradas) {
+	public Hito() {
+		this.fecha = "";
+		this.descripcion = "";
+		this.personasInvolucradas = new ArrayList<>();
+	}
+	
+	public Hito(String fecha, String descripcion, ArrayList<Persona> personasInvolucradas) {
+		this();
 		this.fecha = fecha;
 		this.descripcion = descripcion;
-		this.personasInvolucradas = personasInvolucradas;
+		this.personasInvolucradas.addAll(personasInvolucradas);
 		for (Persona persona : this.personasInvolucradas) {
 			persona.agregarHito(this);
 		}
@@ -21,12 +28,11 @@ public class Hito {
 	}
 
 	public String getFecha() {
-		return this.fecha.toString();
+		return this.fecha;
 	}
 
-	public Conjunto<Persona> getPersonasInvolucradas() {
+	public ArrayList<Persona> getPersonasInvolucradas() {
 		return this.personasInvolucradas;
 	}
-
 	
 }

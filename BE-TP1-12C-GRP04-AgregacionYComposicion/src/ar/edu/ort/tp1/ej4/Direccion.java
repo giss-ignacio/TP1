@@ -1,10 +1,10 @@
 package ar.edu.ort.tp1.ej4;
 
 public class Direccion {
-	private String calle;
-	private String altura;
-	private String piso;
-	private String departamento;
+	private final String calle;
+	private final String altura;
+	private final String piso;
+	private final String departamento;
 
 	public Direccion(String calle, String altura, String piso, String departamento) {
 		this.calle = calle;

@@ -1,7 +1,5 @@
 package ar.edu.ort.tp1.ej5;
 
-import java.util.Date;
-
 public class Test {
 
 	public static void main(String[] args) {

@@ -4,7 +4,7 @@ public class Test {
 
 	public static void main(String[] args) {
 		
-		Persona messi = new Persona("Messirve", "Lionel");
+		Persona messi = new Persona("Messi", "Lionel");
 		messi.agregarEmail("lio@messi.com");
 		messi.agregarTelefono("549", "114111", "2222", TipoDeLinea.CELULAR);
 		messi.agregarTelefono("068", "32444", "5678", TipoDeLinea.CELULAR);

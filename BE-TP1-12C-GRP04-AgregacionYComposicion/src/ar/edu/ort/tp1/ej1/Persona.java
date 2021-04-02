@@ -1,7 +1,6 @@
 package ar.edu.ort.tp1.ej1;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Persona {
 	private String apellido;
@@ -9,12 +8,18 @@ public class Persona {
 	private ArrayList<NumeroTelefonico> telefonos;
 	private ArrayList<Email> emails;
 	
-	
-	public Persona(String apellido, String nombre) {
-		this.apellido = apellido;
-		this.nombre = nombre;
+	public Persona() {
 		this.telefonos = new ArrayList<>();
 		this.emails = new ArrayList<>();
+		this.nombre = "";
+		this.apellido = "";
+	}
+	
+	public Persona(String apellido, String nombre) {
+		this();
+		this.apellido = apellido;
+		this.nombre = nombre;
+		
 	}
 	
 	/**

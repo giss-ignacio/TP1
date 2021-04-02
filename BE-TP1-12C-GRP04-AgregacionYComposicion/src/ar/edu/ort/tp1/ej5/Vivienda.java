@@ -9,7 +9,6 @@ public class Vivienda {
 	private List<Mueble> muebles;
 
 	public Vivienda(Direccion direccion) {
-		super();
 		this.direccion = direccion;
 		this.personas = new ArrayList<>();
 		this.muebles = new ArrayList<>();

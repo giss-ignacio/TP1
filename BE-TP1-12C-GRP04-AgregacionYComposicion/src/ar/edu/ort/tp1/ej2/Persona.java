@@ -1,22 +1,26 @@
 package ar.edu.ort.tp1.ej2;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Persona {
 	private String apellido;
 	private String nombre;
 	private ArrayList<NumeroTelefonico> telefonos;
 	private ArrayList<Email> emails;
-	private Conjunto<Mascota> mascotas;
+	private ArrayList<Mascota> mascotas;
 	
-	
-	public Persona(String apellido, String nombre) {
-		this.apellido = apellido;
-		this.nombre = nombre;
+	public Persona() {
 		this.telefonos = new ArrayList<>();
 		this.emails = new ArrayList<>();
-		this.mascotas = new Conjunto<>();
+		this.mascotas = new ArrayList<>();
+		this.nombre = "";
+		this.apellido = "";
+	}
+	
+	public Persona(String apellido, String nombre) {
+		this();
+		this.apellido = apellido;
+		this.nombre = nombre;
 	}
 	
 	/**
@@ -56,13 +60,37 @@ public class Persona {
 		emails.add(new Email(email));
 	}
 	
+	public Email quitarEmail(String email) {
+		Email emailQuitado = buscarEmail(email);
+		if (emailQuitado != null) {
+			this.emails.remove(emailQuitado);
+		}
+		return emailQuitado;
+	}
+	
+	public Email buscarEmail(String emailABuscar) {
+		Email emailBuscado = null;
+		for (Email email : this.emails) {
+			if (email.getValor().equals(emailABuscar)) {
+				emailBuscado = email;
+			}
+		}
+		return emailBuscado;
+	}
+	
 	public void agregarMascota(Mascota mascota) {
-		this.mascotas.agregar(mascota);
-		
+		if (!this.mascotas.contains(mascota)) {
+			this.mascotas.add(mascota);
+		}
 	}
 	
 	public Mascota quitarMascota(Mascota mascota) {
-		return this.mascotas.remover(mascota);
+		Mascota mascotaQuitada = null;
+		if (this.mascotas.contains(mascota)) {
+			this.mascotas.remove(mascota);
+			mascotaQuitada = mascota;
+		}
+		return mascotaQuitada;
 	}
 	
 	

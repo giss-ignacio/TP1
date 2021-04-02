@@ -4,7 +4,13 @@ public class Mascota {
 	private String nombre;
 	private String tipoDeAnimal;
 	
+	public Mascota() {
+		this.nombre = "";
+		this.tipoDeAnimal = "";
+	}
+	
 	public Mascota(String nombre, String tipoDeAnimal) {
+		this();
 		this.nombre = nombre;
 		this.tipoDeAnimal = tipoDeAnimal;
 	}

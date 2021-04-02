@@ -9,12 +9,11 @@ public class Vivienda {
 	private List<Mueble> muebles;
 
 	public Vivienda(Direccion direccion) {
-		super();
 		this.direccion = direccion;
 		this.personas = new ArrayList<>();
 		this.muebles = new ArrayList<>();
 	}
-	
+
 	public void agregarPersona(Persona persona) {
 		if (!this.personas.contains(persona)) {
 			this.personas.add(persona);

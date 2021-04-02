@@ -12,12 +12,17 @@ public class Edificio {
 	
 	public void realizarMudanza(String pisoOrigen, String deptoOrigen, String pisoDestino, String deptoDestino) {
 		int origenIndice = obtenerPosicion(pisoOrigen, deptoOrigen);
-		Vivienda origen = this.viviendas.get(origenIndice);
 		int destinoIndice = obtenerPosicion(pisoDestino, deptoDestino);
-		Vivienda destino = this.viviendas.get(destinoIndice);
+		if (origenIndice == -1 || destinoIndice == -1) {
+			System.out.println("Error: departamento no encontrado");
+		} else {
+			Vivienda origen = this.viviendas.get(origenIndice);
+			Vivienda destino = this.viviendas.get(destinoIndice);
+			
+			origen.mudar(destino);
+			System.out.printf("SE HA REALIZADO LA MUDANZA DE VIVIENDA %d A VIVIENDA %d\n", origenIndice+1, destinoIndice+1);
+		}
 		
-		origen.mudar(destino);
-		System.out.printf("SE HA REALIZADO LA MUDANZA DE VIVIENDA %d A VIVIENDA %d\n", origenIndice+1, destinoIndice+1);
 	}
 
 	public void agregarVivienda(Vivienda vivienda) {
