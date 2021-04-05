@@ -1,9 +1,11 @@
 package ar.edu.ort.tp1.ej5;
 
+import java.util.ArrayList;
+
 public class Test {
 
 	public static void main(String[] args) {
-		Edificio edificio = new Edificio();
+		
 		
 		Vivienda vivienda1 = new Vivienda(new Direccion("Montañeses", "1234", "4", "C"));
 		
@@ -25,8 +27,10 @@ public class Test {
 		
 		Vivienda vivienda2 = new Vivienda(new Direccion("Montañeses", "1234", "2", "B"));
 		
-		edificio.agregarVivienda(vivienda1);
-		edificio.agregarVivienda(vivienda2);
+		ArrayList<Vivienda> viviendas = new ArrayList<>();
+		viviendas.add(vivienda1);
+		viviendas.add(vivienda2);
+		Edificio edificio = new Edificio(viviendas);
 		
 		edificio.mostrarTodo();
 		

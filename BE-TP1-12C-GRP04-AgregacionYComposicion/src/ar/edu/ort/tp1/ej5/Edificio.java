@@ -1,13 +1,13 @@
 package ar.edu.ort.tp1.ej5;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Edificio {
-	List<Vivienda> viviendas;
+	final ArrayList<Vivienda> viviendas;
 	
-	public Edificio() {
+	public Edificio(ArrayList<Vivienda> viviendas) {
 		this.viviendas = new ArrayList<>();
+		this.viviendas.addAll(viviendas);
 	}
 	
 	public void realizarMudanza(String pisoOrigen, String deptoOrigen, String pisoDestino, String deptoDestino) {
@@ -23,10 +23,6 @@ public class Edificio {
 			System.out.printf("SE HA REALIZADO LA MUDANZA DE VIVIENDA %d A VIVIENDA %d\n", origenIndice+1, destinoIndice+1);
 		}
 		
-	}
-
-	public void agregarVivienda(Vivienda vivienda) {
-		viviendas.add(vivienda);
 	}
 	
 	private int obtenerPosicion(String piso, String depto) {
