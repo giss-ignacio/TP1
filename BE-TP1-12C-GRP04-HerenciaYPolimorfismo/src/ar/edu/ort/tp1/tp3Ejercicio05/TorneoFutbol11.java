@@ -1,13 +1,13 @@
-package ar.edu.ort.tp1.tp3Ejercicio05.incompleto;
+package ar.edu.ort.tp1.tp3Ejercicio05;
 
-public class TorneoFutbol8 extends TorneoFutbol {
+public class TorneoFutbol11 extends TorneoFutbol {
 
-	public TorneoFutbol8() {
+	public TorneoFutbol11() {
 	}
 
 	@Override
 	public String getTipo() {
-		return "Torneo de futbol 8";
+		return "Torneo de futbol 11";
 	}
 
 	@Override
@@ -17,12 +17,12 @@ public class TorneoFutbol8 extends TorneoFutbol {
 
 	@Override
 	public int puntajePartidoPerdido() {
-		return 1;
+		return 0;
 	}
 
 	@Override
 	public int puntajeVallaInvicta() {
-		return 1;
+		return 0;
 	}
 
 	@Override
@@ -32,6 +32,6 @@ public class TorneoFutbol8 extends TorneoFutbol {
 
 	@Override
 	public int puntajeEmpateMas3Goles() {
-		return 1;
+		return 0;
 	}
 }

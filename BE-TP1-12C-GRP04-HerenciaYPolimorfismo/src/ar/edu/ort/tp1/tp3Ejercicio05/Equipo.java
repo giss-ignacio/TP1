@@ -1,4 +1,4 @@
-package ar.edu.ort.tp1.tp3Ejercicio05.incompleto;
+package ar.edu.ort.tp1.tp3Ejercicio05;
 
 public class Equipo {
 
